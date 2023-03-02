@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+}
+
+html, head, body, header, nav, main, h1, h2, h3, h4, p, ul, li {
+    padding: 0;
+    border: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header and Navigation */
+
+.header-bar {
+    background-color: rgb(14, 87, 166);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    flex-grow: 1;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    z-index: 9;
+}
+
+.nav-button {
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    cursor: pointer;
+    z-index: 10;
+    
+}
+
+.header-title {
+    color: white;
+    text-align: center;
+    padding: 10px;  
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+}
+
+.navigation {
+    background-color: rgba(14, 87, 166, 0.88);
+    backdrop-filter: blur(8.5px);
+    height: 700px;
+    width: fit-content;
+    left: -150px;
+    position: fixed;
+    transition: all 1s;
+    padding-top: 100px;
+}
+
+.navigation.active {
+    left: 0px;
+}
+
+.nav-menu li {
+    padding: 10px 15px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    list-style-type: none;
+    z-index: 10;
+}
+
+.nav-menu :first-child {
+    padding-top: 400px;
+}
+
+/* Main Photo + Text */
+
+.main-photo {
+    position: relative;
+    width: 100%;
+}
+
+.main-photo img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.main-photo h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Main Content */
+
+.main-info {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.main-info h1 {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.main-info h2 {
+    padding-top: 20px;
+    color: green;
+    border-bottom: 1px solid;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.date-duration {
+    font-size: 15px;
+}
+
+.main-info h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Max-Width 768px - Small Screen */
+
+@media screen and (max-width: 768px) {
+    
+    .header-bar {
+        height: 60px;
+    }
+    
+    .nav-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-photo img {
+        padding-top: 60px;
+    }
+
+    .main-info h1 {
+        font-size: 1.7em;
+    }
+
+    .main-info h2 {
+        font-size: 1.2em;
+    }
+
+    .main-info .date-duration {
+        font-size: 0.8em;
+    }
+
+    .main-info h3 {
+        font-size: 1em;
+    }
+
+    .main-info p {
+        font-size: 0.9em;
+    }
+}
+
+/* Max-width 576px - Extra Small Screen */
+
+@media screen and (max-width: 576px) {
+    
+    .header-bar {
+        height: 40px;
+    }
+    
+    .nav-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .main-photo img {
+        padding-top: 40px;
+    }
+
+    .main-photo h1 {
+        font-size: 1.8em;
+    }
+
+    .main-info h1 {
+        font-size: 1.3em;
+    }
+
+    .main-info h2 {
+        font-size: 1.1em;
+    }
+
+    .main-info .date-duration {
+        font-size: 0.7em;
+    }
+
+    .main-info h3 {
+        font-size: 0.9em;
+    }
+
+    .main-info p {
+        font-size: 0.8em;
+    }
+}
